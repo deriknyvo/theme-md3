@@ -1,10 +1,10 @@
 import './App.css';
-import Button from './Button/Button';
+import Form from './Form/Form';
 
 function App() {
   return (
     <div className="container">
-      <Button text="Cadastrar"/>
+      <Form />
     </div>
   );
 }
