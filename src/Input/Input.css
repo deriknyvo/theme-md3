@@ -1,0 +1,16 @@
+.input {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.input label {
+    font-size: 16px;
+}
+
+.input input {
+    flex: 1;
+    height: 30px;
+    font-size: 15px;
+    padding: 0 6px;
+}
