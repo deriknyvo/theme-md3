@@ -1,21 +1,18 @@
 import './Form.css';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
+import { useState } from 'react';
 
-function Form() {
-    let name = '';
-    let email = '';
+function Form(props) {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
 
     const handleChangeName = (event) => {
-        name = event.target.value;
+        setName(event.target.value);
     }
 
     const handleChangeEmail = (event) => {
-        email = event.target.value;
-    }
-
-    const handleButtonClick = (event) => {
-        console.log('clicou!');
+        setEmail(event.target.value);
     }
 
     return (
@@ -24,7 +21,7 @@ function Form() {
             <Input label="E-mail: " type="email" name="email" onChange={handleChangeEmail}/>
 
             <div className="actions">
-                <Button text="Cadastrar" onClick={handleButtonClick}/>
+                <Button text="Cadastrar" onClick={() => props.handleButtonClick(name, email)}/>
             </div>
         </form>
     );

@@ -1,10 +1,10 @@
 function List(prop) {
+    const items = prop.list.map((item, key) => {
+        return <li key={`${item}-${key}`}>{item}</li>;
+    });
+
     return (
-        <ul>
-            <li>A</li>
-            <li>B</li>
-            <li>C</li>
-        </ul>
+        <ul>{items}</ul>
     );
 }
 
