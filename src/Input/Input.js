@@ -1,12 +1,16 @@
 import './Input.css';
 
-function Input(props) {
+function Input({ onChange, name, type, label, placeholder }) {
   return (
     <div className="input">
-      <label htmlFor={props.name}>{props.label}</label>
-      <input onChange={props.onChange} id={props.name} type={props.type} />
+      <input placeholder={placeholder} onChange={onChange} id={name} type={type} autoComplete="off" />
+      <label htmlFor={name}>{label}</label>
     </div>
   );
 }
+
+Input.defaultProps = {
+  placeholder: ' '
+};
 
 export default Input;

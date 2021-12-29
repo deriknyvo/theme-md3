@@ -17,8 +17,8 @@ function Form(props) {
 
   return (
     <form>
-      <Input label="Nome: " type="text" name="name" onChange={handleChangeName} />
-      <Input label="E-mail: " type="email" name="email" onChange={handleChangeEmail} />
+      <Input label="Nome" type="text" name="name" onChange={handleChangeName} />
+      <Input label="E-mail" type="email" name="email" onChange={handleChangeEmail} />
       <div className="actions">
         <Button text="Cadastrar" onClick={() => props.handleButtonClick(name, email)} />
       </div>
